@@ -7,7 +7,7 @@
                 <a href="<?php the_permalink() ;?>">
                 <h2><?php the_title( ) ?> </h2>
                 </a>
-                <p class="meta">
+                <div class="meta">
                     Posted at <?php the_date('F j, Y g:i a'); ?> by 
                     <a style="color:#fff" href="<?php echo get_author_posts_url( get_the_author_id()); ?> " >
                         <?php the_author( ) ?> 
@@ -26,9 +26,14 @@
 
                         echo trim($output,$separator);
                     ?>
-                </p>
+                </div>
                 <p>
-                    <?php the_content(); ?>
+                    <?php if(has_post_thumbnail() ) :?>
+                        <div class="post-thumbnail">
+                            <?php the_post_thumbnail('thumbnail' ) ?>
+                        </div>
+                    <?php endif ; ?>
+                    <?php the_excerpt(); ?>
                 </p>
 
                 <a class="btn btn-primary" href="<?php the_permalink( );?>">Read more</a>

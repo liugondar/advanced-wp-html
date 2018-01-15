@@ -62,9 +62,8 @@ header .h_right{
 }
 
 .sidebar{
-    float: right;
-    margin: 1%;
-    width: 30%;
+    position: fixed;
+    right: 10%;
 }
 
 .block{
@@ -124,4 +123,14 @@ footer .f_left{
 
 footer .f_left p{
     padding-top: 10px;
+}
+
+article .post-thumbnail {
+    background: #f4f4f4;
+}
+
+article .post-thumbnail img{
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
