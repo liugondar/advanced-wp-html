@@ -24,5 +24,10 @@ function init_widgets($id){
 }
 
 add_action('widgets_init', 'init_widgets');
+
+function adv_excerpt_length(){
+    return 25;
+}
+add_filter( 'excerpt_length','adv_excerpt_length');
 ?>
 

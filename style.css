@@ -5,10 +5,12 @@
     Description: Advanced wp theme;
     Version: 1.0
 */
+*{
+    list-style: none;
+}
 .navbar{
     border-radius: 0px;
 }
-
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 19px;
@@ -61,6 +63,7 @@ header .h_right{
 
 .sidebar{
     float: right;
+    margin: 1%;
     width: 30%;
 }
 
@@ -98,4 +101,27 @@ article.post .meta{
 	background:#009acd;
 	color:#fff;
 	padding:7px;
+}
+
+article .meta a{
+    color: #fff;
+}
+
+article h2{
+    color: #000;
+    font: bold;
+}
+
+.main-footer{
+    background: #222;
+    color: #777;
+}
+
+footer .f_left{
+    float: left;
+    color: #777;
+}
+
+footer .f_left p{
+    padding-top: 10px;
 }

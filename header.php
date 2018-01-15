@@ -9,7 +9,6 @@
     <title><?php wp_title( );?></title>
     <!-- bootstrap 3 -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <!-- fontawesome -->
     
@@ -28,13 +27,13 @@
     <header>
         <div class="container">
             <h1>
-                <a href="index.html">
+                <a href="<?php echo home_url( '/') ;?>">
                     <?php bloginfo( 'name' ) ?>
                 </a>
             </h1>
             <small><?php bloginfo( 'description' ) ?></small>
             <div class="h_right" >
-                <form method="get" action="<?php esc_url(home_url('/')); ?>">
+                <form method="get" action="<?php echo home_url('/'); ?>">
                     <div class="form-group">
                         <input type="text" class="form-control" name="search" placeholder="Search..."  />
                     </div>
@@ -56,7 +55,7 @@
                      </button>
                 </div>
 
-                <a class="navbar-brand" href="<?php bloginfo( '' )?>">Wordpress theme</a>
+                <a class="navbar-brand" href="<?php echo home_url('/');?>">Wordpress theme</a>
                 <?php 
                     wp_nav_menu(array(
                         'theme_location'=>'primary',
