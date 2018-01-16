@@ -61,6 +61,10 @@ header .h_right{
     width: 60%;
 }
 
+.main-front{
+    width: 100%;
+}
+
 .sidebar{
     float: right;
     width: 30%;
@@ -165,4 +169,41 @@ button.f_right{
 .parent-link a{
     font: bold;
     color: #000;
+}
+
+.widget-bottom{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+}
+
+.box h3{
+    text-align: center;
+    background-color: #009acd;
+    color: white;
+    margin-top:0;
+    line-height: 2em;
+}
+
+.box{
+    border: 1px solid #ccc;
+    background: #f4f4f4;
+    margin-top: 20px;
+}
+
+.box div:last-child{
+    padding:10px;
+}
+
+.showcase{
+    align-items: center;   
+    text-align: center;
+    margin: 5px;
+    margin-bottom: 20px;
+    padding:5px;
+    background: #c0e5f1;
+}
+
+.btn-showcase{
+    margin: 20px;
 }

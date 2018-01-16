@@ -43,5 +43,7 @@
                 <?php echo apautop('Sorry, NO post were found!') ?>
             <?php endif ; ?>
         </div>
+            <?php get_sidebar( 'sidebar' ); ?>
+        </div>
 
 <?php get_footer(); ?>

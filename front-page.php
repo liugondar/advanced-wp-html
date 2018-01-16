@@ -1,6 +1,7 @@
 <?php get_header(); ?>
     <div class="content container">
-        <div class="main block">
+        <?php get_sidebar( 'showcase' ) ?>
+        <div class="block main-front">
             <?php if(have_posts()): ?>
                 <?php while(have_posts()): the_post() ?>
                     <article class="page">
@@ -33,9 +34,12 @@
                 <?php echo apautop('Sorry, NO post were found!') ?>
             <?php endif ; ?>
         </div>
-    <?php get_sidebar( 'sidebar' ) ?>
-        
-    </div>
-    <div class="clr"></div>
+<div class="widget-bottom"> 
+     <?php get_sidebar( 'box1' ); ?>
+     <?php get_sidebar( 'box2' ); ?>
+     <?php get_sidebar( 'box3' ); ?>
+     </div>
+     </div>
+     
 
 <?php get_footer(); ?>

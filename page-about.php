@@ -28,4 +28,6 @@
             <?php endif ; ?>
         </div>
 
+    <div class="clr"></div>
+
 <?php get_footer(); ?>
