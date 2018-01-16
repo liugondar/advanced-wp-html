@@ -11,6 +11,7 @@
             <div class="f_left">
                 <p>&copy; 2018-gondar</p>
             </div>
+            <button onclick="topFunction()" class="btn btn-success f_right " id="myBtn" title="Go to top">Top</button>
 
             <div class="f_right">
                 <?php 

@@ -3,41 +3,31 @@
         <div class="main block">
             <?php if(have_posts()): ?>
                 <?php while(have_posts()): the_post() ?>
-                <article class="post">
-                <a href="<?php the_permalink() ;?>">
-                <h2><?php the_title( ) ?> </h2>
-                </a>
-                <div class="meta">
-                    Posted at <?php the_date('F j, Y g:i a'); ?> by 
-                    <a style="color:#fff" href="<?php echo get_author_posts_url( get_the_author_id()); ?> " >
-                        <?php the_author( ) ?> 
-                    </a>
-                    Posted in
-                    <?php 
-                        $categories=get_the_category(  ) ;
-                        $separator=", ";
-                        $output='';
-                        if($categories){
-                            foreach($categories as $category){
-                                $output.= '<a href="'.get_category_link($category->term_id)
-                                .'">'. $category->cat_name.'</a>'.$separator;
-                            }
-                        }
-
-                        echo trim($output,$separator);
-                    ?>
-                </div>
-                <p>
-                    <?php if(has_post_thumbnail() ) :?>
-                        <div class="post-thumbnail">
-                            <?php the_post_thumbnail('thumbnail' ) ?>
-                        </div>
-                    <?php endif ; ?>
-                    <?php the_excerpt(); ?>
-                </p>
-
-                <a class="btn btn-primary" href="<?php the_permalink( );?>">Read more</a>
-            </article>
+                    <article class="page">
+                        <?php if((page_is_parent()|| $post->post_parent)>0) : ?>
+                        <nav class="nav sub-nav">
+                            <ul class="list-inline">
+                                <li>
+                                <span class="parent-link">
+                                    <a href="<?php echo get_the_permalink( get_top_parent());?>" > 
+                                        <?php echo get_the_title(get_top_parent()); ?>
+                                    </a>
+                                </span>
+                                </li>
+                                <li >
+                                <?php $args=array(
+                                    'child_of' => get_top_parent(),
+                                    'title_li' => ''
+                                ); ?>
+                                <?php wp_list_pages($args); ?>
+                                </li>
+                            </ul>
+                        </nav>
+                        <?php endif ; ?>
+                        <div class="clr"></div>
+                        <h1><?php the_title(); ?></h1>
+                        <p><?php the_content(); ?></p>
+                    </article>
                 <?php endwhile ; ?>
             <?php else : ?>
                 <?php echo apautop('Sorry, NO post were found!') ?>

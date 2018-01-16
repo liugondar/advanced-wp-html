@@ -34,7 +34,7 @@
             <div class="h_right" >
                 <form method="get" action="<?php echo home_url('/'); ?>">
                     <div class="form-group">
-                        <input type="text" class="form-control" name="search" placeholder="Search..."  />
+                        <input type="text" class="form-control" name="s" placeholder="Search..."  />
                     </div>
                 </form>
             </div>
