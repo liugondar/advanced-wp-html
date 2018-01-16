@@ -17,6 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:900i" rel="stylesheet"> 
     <!-- custom css -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
     <?php wp_head(); ?>

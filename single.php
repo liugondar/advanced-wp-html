@@ -39,6 +39,9 @@
             <?php else : ?>
                 <?php echo apautop('Sorry, NO post were found!') ?>
             <?php endif ; ?>
+            <?php comments_template( ); ?>
         </div>
+            <?php get_sidebar(); ?>
+   </div>
 
 <?php get_footer(); ?>

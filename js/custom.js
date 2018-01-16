@@ -15,3 +15,8 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+$('#comment').addClass('form-control');
+$('.comment-form-comment').addClass('form-group');
+$('#submit').addClass('btn btn-success');
+$('.comment-reply-link').addClass('btn btn-primary');
