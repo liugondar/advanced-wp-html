@@ -9,7 +9,6 @@
     <title><?php wp_title( );?></title>
     <!-- bootstrap 3 -->
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/css/bootstrap.min.css" type="text/css">
-
     <!-- fontawesome -->
     
     <link rel="stylesheet" href="<?php bloginfo('template_url');?>/css/font-awesome/css/font-awesome.min.css" type="text/css">

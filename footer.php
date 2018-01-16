@@ -1,4 +1,3 @@
-
         <div class="sidebar">
             <?php if(is_active_sidebar( 'sidebar' )): ?>
                 <?php dynamic_sidebar( 'sidebar' ) ?>
@@ -26,4 +25,5 @@
 </body>
 
 <?php wp_footer(); ?>
+    <script src="<?php bloginfo( 'stylesheet_directory' );?>/js/custom.js"></script>
 </html>
